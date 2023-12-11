@@ -9,11 +9,11 @@ foreach (string file in Directory.GetFiles(source, "*", SearchOption.AllDirector
     // 获取文件大小，单位为字节
     long size = new FileInfo(file).Length;
     // 判断文件大小是否在指定范围内，并重命名文件
-    if (size > 5120 && size < 204800)
+    if (size > 5120 && size < 94800)
     {
         File.Copy(file, Path.Combine(target, "profile.sav"), true);
     }
-    else if (size > 307200)
+    else if (size > 97200)
     {
         File.Copy(file, Path.Combine(target, "save_0.sav"), true);
     }
